@@ -347,14 +347,14 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // Disables axis when it's not being used.
 #define DISABLE_X false
 #define DISABLE_Y false
-#define DISABLE_Z false
+#define DISABLE_Z true
 #define DISABLE_E false // For all extruders
 #define DISABLE_INACTIVE_EXTRUDER true //disable only inactive extruders and keep active extruder enabled
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR true
 #define INVERT_Y_DIR false
-#define INVERT_Z_DIR false
+#define INVERT_Z_DIR true
 #define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
@@ -373,9 +373,9 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 300
-#define Y_MAX_POS 300
-#define Z_MAX_POS 300
+#define X_MAX_POS 250
+#define Y_MAX_POS 250
+#define Z_MAX_POS 250
 
 //===========================================================================
 //============================= Filament Runout Sensor ======================
@@ -431,9 +431,9 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
   #ifdef AUTO_BED_LEVELING_GRID
 
     #define LEFT_PROBE_BED_POSITION 15
-    #define RIGHT_PROBE_BED_POSITION 260
+    #define RIGHT_PROBE_BED_POSITION 250
     #define FRONT_PROBE_BED_POSITION 20
-    #define BACK_PROBE_BED_POSITION 270
+    #define BACK_PROBE_BED_POSITION 250
 
     #define MIN_PROBE_EDGE 10 // The probe square sides can be no smaller than this
 
@@ -446,10 +446,10 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
       // Arbitrary points to probe. A simple cross-product
       // is used to estimate the plane of the bed.
       #define ABL_PROBE_PT_1_X 0
-      #define ABL_PROBE_PT_1_Y 250 //215 for 8"
+      #define ABL_PROBE_PT_1_Y 220 //215 for 8"
       #define ABL_PROBE_PT_2_X 125
       #define ABL_PROBE_PT_2_Y 125
-      #define ABL_PROBE_PT_3_X 240  // 140 for 8"
+      #define ABL_PROBE_PT_3_X 230  // 140 for 8"
       #define ABL_PROBE_PT_3_Y 0
 
   #endif // AUTO_BED_LEVELING_GRID
@@ -521,7 +521,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.19,80.19,4000,102.3}  // default steps per unit for Ultimaker
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.63,80.63,4000,102.3}  // default steps per unit for Ultimaker
 #define DEFAULT_MAX_FEEDRATE          {250, 250, 2, 25}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {1000,1000,5,1000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
@@ -564,11 +564,11 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // Preheat Constants
 #define PLA_PREHEAT_HOTEND_TEMP 210
 #define PLA_PREHEAT_HPB_TEMP 80
-#define PLA_PREHEAT_FAN_SPEED 0   // Insert Value between 0 and 255
+#define PLA_PREHEAT_FAN_SPEED 255   // Insert Value between 0 and 255
 
 #define ABS_PREHEAT_HOTEND_TEMP 240
 #define ABS_PREHEAT_HPB_TEMP 110
-#define ABS_PREHEAT_FAN_SPEED 0   // Insert Value between 0 and 255
+#define ABS_PREHEAT_FAN_SPEED 255   // Insert Value between 0 and 255
 
 //==============================LCD and SD support=============================
 
